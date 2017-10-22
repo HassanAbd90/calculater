@@ -5,18 +5,8 @@
     {
         if( document.getElementById("res").innerHTML=="0")
            document.getElementById("res").innerHTML="";
-        if(opr==="")
-        {
-          document.getElementById("res").innerHTML=     document.getElementById("res").innerHTML+n;
-          x=Number(document.getElementById("res").innerHTML);
-        }
-        else
-        {
-         
-             document.getElementById("res").innerHTML=     document.getElementById("res").innerHTML+n;
-             y=Number(document.getElementById("res").innerHTML);
+        document.getElementById("res").innerHTML=     document.getElementById("res").innerHTML+n;
 
-        }
     }
     function dec(){
        
@@ -24,26 +14,28 @@
           document.getElementById("res").innerHTML= document.getElementById("res").innerHTML+".";
     }
     function operater(p){
-        opr=p;
-        document.getElementById("res").innerHTML=  "";
+        if( document.getElementById("res").innerHTML=="")
+            {
+              document.getElementById("eq").innerHTML=document.getElementById("eq").innerHTML.slice(0, document.getElementById("eq").innerHTML.length-1)+p;
+              
+            }
+        else
+            {
+              document.getElementById("eq").innerHTML=document.getElementById("eq").innerHTML+document.getElementById("res").innerHTML + p ;
+              document.getElementById("res").innerHTML="";
+            }
+
     }
     function equal()
     {
-       if(opr=="+") 
-         x=x+y;
-       if(opr=="-") 
-         x=x-y;
-       if(opr=="*") 
-         x=x*y;
-       if(opr=="/") 
-         x=x/y;
-       document.getElementById("res").innerHTML=x;
-       opr=0;
-       y=0;
+      document.getElementById("eq").innerHTML=document.getElementById("eq").innerHTML+document.getElementById("res").innerHTML  ;
+       document.getElementById("res").innerHTML=eval(document.getElementById("eq").innerHTML);
+       document.getElementById("eq").innerHTML="";
+    
     }
     function c()
     {
-       x=0;y=0;opr="";
+       document.getElementById("eq").innerHTML="";
        document.getElementById("res").innerHTML="0";
     }
     function backspace(){
