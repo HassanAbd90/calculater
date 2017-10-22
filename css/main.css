@@ -1,0 +1,56 @@
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+#content{
+    width: 260px;
+    margin: 30px auto;
+    background-color: #75FF98;
+    padding: 10px;
+    text-align: center;
+    color: #B674F8;
+    }
+#res{
+        width: 245px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 28px;
+        background-color: #FFFFFF;
+        color: #333;
+        text-align: left;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding: 5px 5px;
+        }
+.clear
+{
+    width: 60px;
+    height: 50px;
+    background: #FF3636;
+}
+.opr{
+    width: 60px;
+    height: 50px;
+    background: #54FFC6;  
+}
+.eq
+{  width: 60px;
+    height: 50px;
+    background: #21FF58;  }
+.num
+{
+    width: 60px;
+    height: 50px;
+    background: #F3DCCD;
+}
+.backspace
+{
+    width: 190px;
+    height: 50px;
+    background: hsl(51, 100%, 74%);  
+}
+button{
+    font-weight: bold;
+    font-size: 22px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
